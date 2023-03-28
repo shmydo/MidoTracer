@@ -12,10 +12,10 @@ namespace Mido{
     enum class GameState {PLAY, QUIT};
 
     namespace constants{
-        constexpr int DEFAULT_WIDTH  {1280};
-        constexpr int DEFAULT_HEIGHT {720};
-        constexpr int DEFAULT_GL_MAJOR_CVERSION {3};
-        constexpr int DEFAULT_GL_MINOR_CVERSION {1};
+        constexpr int DEFAULT_WIDTH             = 1280;
+        constexpr int DEFAULT_HEIGHT            = 720;
+        constexpr int DEFAULT_GL_MAJOR_CVERSION = 3;
+        constexpr int DEFAULT_GL_MINOR_CVERSION = 1;
     }   
 
     class MainGame
@@ -34,8 +34,8 @@ namespace Mido{
     private:
         void initSystems(); 
 
-        SDL_GLContext   m_glContext;
         GameState       m_gameState;    
+        SDL_Renderer   *m_renderer;
         SDL_Window     *m_window;
         int             m_height;
         int             m_width;
